@@ -4,3 +4,7 @@ This follows the Principle of Least Knowledge because the main program only need
 
 Phase 2
 In Phase 2, I created separate classes for network traffic, user access, and encryption. During the emergency, I kept track of the ports, usernames, and database name so I could reverse the actions during the all-clear sequence.  Doing everything manually could become difficult and lead to mistakes if the system handled thousands of ports and users. It would be easy to forget an action or restore the wrong account. A simpler system that handles these operations automatically would make the code easier to manage.
+
+Phase 3
+The Facade pattern makes Main simpler by grouping multiple actions into one command. If the network controller changed, Main could stay the same as long as the facade handled the changes.
+
